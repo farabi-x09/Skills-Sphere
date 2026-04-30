@@ -1,0 +1,122 @@
+[ {
+   "id": 1,
+
+   "title": "Complete Web Development Bootcamp",
+   "instructor": "John Doe",
+   "duration": "20 hours",
+   "rating": 4.8,
+   "level": "Beginner",
+   "description": "Learn full-stack web development from scratch.",
+   "image": "https://i.ibb.co.com/BKH1S6sh/download.jpg",
+   "category": "Development"
+ },
+
+  {
+    "id": 2,
+
+    "title": "Advanced CSS and Sass",
+    "instructor": "Jane Smith",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Advanced",
+    "description": "Master modern CSS techniques and Sass.",
+    "image": "https://i.ibb.co.com/zhctM4yp/images.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Stone",
+    "duration": "15 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Understand UI and UX design principles.",
+    "image": "https://i.ibb.co.com/Xx9QpMVC/images-1.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+
+    "title": "Python for Data Science",
+    "instructor": "Michael Brown",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Learn Python data analysis and visualization.",
+    "image": "https://i.ibb.co.com/nN1Hh2ZT/download-1.jpg",
+    "category": "Data Science"
+  },
+  {
+    "id": 5,
+
+    "title": "Digital Marketing Masterclass",
+    "instructor": "Sarah Davis",
+    "duration": "18 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Boost your traffic with digital marketing strategies.",
+    "image": "https://i.ibb.co.com/C5FFGhcx/images-2.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 6,
+
+    "title": "Financial Modeling Basics",
+    "instructor": "David Wilson",
+    "duration": "10 hours",
+    "rating": 4.4,
+    "level": "Beginner",
+    "description": "Build financial models for business decisions.",
+    "image": "https://i.ibb.co.com/QF5HVRSh/download-2.jpg",
+    "category": "Business"
+  },
+  {
+    "id": 7,
+
+    "title": "React and Redux Bootcamp",
+    "instructor": "Alex Johnson",
+    "duration": "22 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Build scalable web apps using React and Redux.",
+    "image": "https://i.ibb.co.com/hRgLwrFf/download-3.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+
+    "title": "Introduction to Cybersecurity",
+    "instructor": "Robert Taylor",
+    "duration": "14 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Learn the basics of securing networks.",
+    "image": "https://i.ibb.co.com/JwDvCrtx/download-4.jpg",
+    "category": "Security"
+  },
+  {
+    "id": 9,
+
+    "title": "Machine Learning with Scikit-Learn",
+    "instructor": "Lisa Anderson",
+    "duration": "30 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Implement machine learning models efficiently.",
+    "image": "https://i.ibb.co.com/844q5yDg/download-5.jpg",
+    "category": "Data Science"
+  },
+  {
+    "id": 10,
+
+    "title": "JavaScript Algorithms and Data Structures",
+    "instructor": "James White",
+    "duration": "28 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Master algorithmic thinking in JavaScript.",
+    "image": "https://i.ibb.co.com/G4QPkZg2/images-3.jpg",
+    "category": "Development"
+  }
+]

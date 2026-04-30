@@ -1,0 +1,35 @@
+import Image from 'next/image';
+import React from 'react';
+import { FaPlay } from 'react-icons/fa';
+import bannerImg from "@/assets/img/banner2.png";
+const Banner = () => {
+    return (
+        <div className='bg-[#eee8fc] py-10'>
+            <div className='w-11/12 mx-auto flex flex-wrap-reverse items-center justify-center xl:justify-between gap-10'>
+                <div className='left w-120 space-y-4  text-center md:text-left'>
+                    <h1 className='font-bold text-3xl md:text-5xl lg:text-7xl leading-normal'>
+                        Upgrade Your <span className='text-purple-600'>Skills</span> Today
+                    </h1>
+                    <p className='text-gray-700 text-lg'>
+                        Learn from industry experts and boost your career with in demand skills. Join our community of learners and start your journey to success.
+                    </p>
+                    <div className='flex flex-wrap gap-5  justify-center md:justify-start'>
+                        <button className='btn bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 font-semibold'>
+                            Explore Courses
+                        </button>
+                        <button className='btn bg-white py-2 px-4 rounded  font-semibold flex items-center gap-2'>
+                            <FaPlay className='text-purple-600' />
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+                <div className='right  '>
+                <Image src={bannerImg} alt="Banner" width={800} height='auto' />
+                </div>
+            </div>
+
+        </div>
+    );
+};
+
+export default Banner;
