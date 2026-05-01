@@ -6,7 +6,7 @@ const TrendingCard = ({course}) => {
      const { title, image,  duration, rating} = course;
     return (
 
-       <div className=' border border-gray-200 rounded-2xl p-2 shadow-sm w-full max-w-[260px] flex flex-col justify-between h-[330px]'>
+       <div className=' border border-gray-200 rounded-2xl p-2 shadow-sm w-full max-w-[260px] flex flex-col justify-between h-[330px] hover:scale-105 duration-300 cursor-pointer'>
             <div className='relative h-36 w-full mb-3 bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center'>
                 <Image
                     className=' rounded-2xl ' // 
