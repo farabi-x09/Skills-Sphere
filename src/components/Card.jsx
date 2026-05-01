@@ -1,4 +1,3 @@
-import { CardContent } from '@heroui/react';
 import Image from 'next/image';
 import React from 'react';
 import {  BsStarFill } from 'react-icons/bs';
@@ -9,11 +8,11 @@ const Card = ({course}) => {
 
     return (
         <div className='w-100   border-2 border-gray-300 rounded-lg relative'>
-            <Image className='w-full bg-cover h-50 rounded-t-lg' src={image} alt={title} width={300} height={200} />
+            <Image className='w-full object-cover h-50 rounded-t-lg' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  src={image} alt={title} width={300} height={200} />
             <div className='w-11/12 mx-auto'>
             <h1 className='font-bold text-2xl mt-4'>{title}</h1>
             <div className='flex justify-between text-gray-700 gap-4 mt-4'>
-                <p className='flex flex-wrap'>Instructor: <span className='font-semibold text-black'> {instructor} </span></p>
+                <p className='flex flex-wrap'>Instructor: <span className='font-semibold text-black ml-1'>  {instructor} </span></p>
                 <p>Level:  <span className='font-semibold text-black'> {level} </span></p>
                 
             </div>

@@ -2,13 +2,14 @@ import Image from 'next/image';
 import React from 'react';
 import { FaPlay } from 'react-icons/fa';
 import bannerImg from "@/assets/img/banner2.png";
+import rocket from "@/assets/img/rocket.png";
 const Banner = () => {
     return (
         <div className='bg-[#eee8fc] py-10'>
             <div className='w-11/12 mx-auto flex flex-wrap-reverse items-center justify-center xl:justify-between gap-10'>
                 <div className='left w-120 space-y-4  text-center md:text-left'>
                     <h1 className='font-bold text-3xl md:text-5xl lg:text-7xl leading-normal'>
-                        Upgrade Your <span className='text-purple-600'>Skills</span> Today
+                        Upgrade Your <span className='text-purple-600'>Skills</span> Today <Image src={rocket} alt="Rocket" className='inline-block w-10 lg:w-30 lg:h-30' />
                     </h1>
                     <p className='text-gray-700 text-lg'>
                         Learn from industry experts and boost your career with in demand skills. Join our community of learners and start your journey to success.
