@@ -1,5 +1,9 @@
 import React from 'react';
 import InstructorCard from './InstructorCard';
+import t1 from '@/assets/img/t1.png'; 
+import t2 from '@/assets/img/t2.png'; 
+import t3 from '@/assets/img/t3.png'; 
+import t4 from '@/assets/img/t4.png'; 
 
 const TopInstructors = () => {
     const instructors = [
@@ -8,28 +12,28 @@ const TopInstructors = () => {
             name: 'John Doe',
             role: 'Full Stack Developer',
             experience: '10+ Years Exp.',
-            image: 'https://randomuser.me/api/portraits/men/32.jpg' // Replace with your image paths or imports
+            image: t1
         },
         {
             id: 2,
             name: 'Jane Smith',
             role: 'UI/UX Designer',
             experience: '8+ Years Exp.',
-            image: 'https://randomuser.me/api/portraits/women/44.jpg'
+            image: t2
         },
         {
             id: 3,
             name: 'Mike Johnson',
             role: 'Digital Marketer',
             experience: '7+ Years Exp.',
-            image: 'https://randomuser.me/api/portraits/men/46.jpg'
+            image: t3
         },
         {
             id: 4,
             name: 'Sarah Wilson',
             role: 'Data Scientist',
             experience: '9+ Years Exp.',
-            image: 'https://randomuser.me/api/portraits/women/68.jpg'
+            image: t4
         }
     ];
 
