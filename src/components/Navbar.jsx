@@ -6,9 +6,14 @@ import logo from "@/assets/img/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import NavLink from "./NavLink";
+import { authClient } from "@/lib/auth-client";
+import { Avatar } from "@heroui/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+  console.log(user);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -51,7 +56,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Auth Links */}
-        <div className="hidden md:flex items-center gap-2.5 text-sm font-medium">
+        {/* <div className="hidden md:flex items-center gap-2.5 text-sm font-medium">
           <NavLink href={"/signin"} className="px-4 py-2 border rounded-md hover:bg-gray-50 transition-colors">
             SignIn
           </NavLink>
@@ -59,7 +64,34 @@ const Navbar = () => {
           <NavLink href={"/register"} className="px-4 py-2 border rounded-md hover:bg-gray-50 transition-colors ">
             Register
           </NavLink>
-        </div>
+        </div> */}
+
+         {user ? (
+      <div className="hidden md:flex  gap-2.5 text-sm font-medium">
+        <Avatar>
+          <Avatar.Image src={user?.image || ""} alt={user?.name || "User Avatar"} />
+          <Avatar.Fallback>{user?.name ? user.name.charAt(0) : "U"}</Avatar.Fallback>
+        </Avatar>
+        <button
+          onClick={() => {
+            authClient.signOut(); 
+            toggleMenu();
+          }}
+          className="w-full text-center px-2 py-2 border rounded-md cursor-pointer hover:bg-gray-50 transition-colors"
+        >
+          Logout
+        </button>
+      </div>
+    ) : (
+      <div className=" hidden md:flex  gap-4 text-sm font-medium">
+        <NavLink href={"/signin"} className="w-full text-center px-2 py-2 border rounded-md" onClick={toggleMenu}>
+          SignIn
+        </NavLink>
+        <NavLink href={"/register"} className="w-full text-center px-2 py-2 border rounded-md" onClick={toggleMenu}>
+          Register
+        </NavLink>
+      </div>
+    )}
 
         {/* Mobile Menu Toggle Button */}
         <button
@@ -91,17 +123,36 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
+        
+        {user ? (
+      <div className="flex flex-col gap-2.5 text-sm font-medium">
+        <Avatar>
+          <Avatar.Image src={user?.image || ""} alt={user?.name || "User Avatar"} />
+          <Avatar.Fallback>{user?.name ? user.name.charAt(0) : "U"}</Avatar.Fallback>
+        </Avatar>
+        <button
+          onClick={() => {
+            authClient.signOut(); 
+            toggleMenu();
+          }}
+          className="w-full text-center py-2 border rounded-md cursor-pointer hover:bg-gray-50 transition-colors"
+        >
+          Logout
+        </button>
+      </div>
+    ) : (
+      <div className="flex flex-col gap-2.5 text-sm font-medium">
+        <NavLink href={"/signin"} className="w-full text-center py-2 border rounded-md" onClick={toggleMenu}>
+          SignIn
+        </NavLink>
+        <NavLink href={"/register"} className="w-full text-center py-2 border rounded-md" onClick={toggleMenu}>
+          Register
+        </NavLink>
+      </div>
+    )}
+   
           
-          <div className="flex flex-col gap-2.5 text-sm font-medium">
-            <NavLink href={"/signin"} className="w-full text-center py-2 border rounded-md" onClick={toggleMenu}>
             
-              SignIn
-            </NavLink>
-            <NavLink href={"/register"} className="w-full text-center py-2 border rounded-md" onClick={toggleMenu}>
-            
-              Register
-            </NavLink>
-          </div>
         </div>
       )}
     </nav>
