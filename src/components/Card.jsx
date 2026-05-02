@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import {  BsStarFill } from 'react-icons/bs';
 
@@ -17,7 +18,9 @@ const Card = ({course}) => {
                 
             </div>
              <p className='absolute top-0 right-0 mt-4 mr-4 bg-white p-2 rounded-xl flex  items-center gap-2'><BsStarFill className='text-amber-400'></BsStarFill> {rating}</p>
-            <button className='btn bg-blue-700 text-white hover:bg-blue-900 w-full my-5 py-2 rounded-full '>View Details</button>
+             <Link href={`/courses/${course.id}`}>
+                <button className='btn bg-blue-700 text-white hover:bg-blue-900 w-full my-5 py-2 rounded-full '>View Details</button>
+             </Link>
               </div>
       </div>
     );
