@@ -52,7 +52,11 @@ export default function SignUpPage() {
             toast.error(error.message || "Failed to create account. Please check your credentials and try again.");
           }
   };
-
+const handleGoogleSignIn = async () => {
+   await authClient.signIn.social({
+    provider: "google",
+  });
+  };
   return (
     <Card className="border mx-auto w-[95%] max-w-lg py-10 my-5">
       <h1 className="text-center text-2xl font-bold">Sign Up</h1>
@@ -130,7 +134,7 @@ export default function SignUpPage() {
 
       <div className="flex justify-center items-center gap-2 border border-gray-300 rounded-lg py-2 mt-5 w-[90%] max-w-xs mx-auto cursor-pointer hover:bg-gray-100 transition-all">
         <FaGoogle></FaGoogle>
-        <button className='btn text-blue-500'>Login with Google</button>
+        <button onClick={handleGoogleSignIn} className='btn text-blue-500'>Login with Google</button>
       </div>
 
       <p className="text-center mt-5">
