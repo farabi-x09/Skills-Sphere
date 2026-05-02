@@ -40,13 +40,17 @@ export default function SignUpPage() {
       password,
     });
     console.log(data, error);
-    if(data){
-      router.push('/')
-      toast.success("Account created successfully!");
+    if (data) {
+      toast.success("Signed up successfully!");
+    
+      setTimeout(() => {
+        router.push("/");
+      }, 1500); 
     }
-    else{
-      toast.error(error.message || "Failed to create account");
-    }
+    
+          if(error){        
+            toast.error(error.message || "Failed to create account. Please check your credentials and try again.");
+          }
   };
 
   return (

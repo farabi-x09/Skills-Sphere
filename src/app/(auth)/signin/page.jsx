@@ -19,10 +19,11 @@ import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
     const [isShowPassword, setIsShowPassword] =  useState(false);
-
+const router = useRouter()
   const onSubmit = async (e) => {
     e.preventDefault();
      const email = e.target.email.value;
@@ -32,16 +33,18 @@ export default function SignInPage() {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/"
+      
 });
 console.log(data,error);
-      if(data){
-        toast.success("Logged in successfully!");
-       setTimeout(() => {
-    router.push('/');
-  }, 3000);
-      }
-      else{        
+if (data) {
+  toast.success("Logged in successfully!");
+
+  setTimeout(() => {
+    router.push("/");
+  }, 1500); 
+}
+
+      if(error){        
         toast.error(error.message || "Failed to log in. Please check your credentials and try again.");
       }
   };
@@ -119,7 +122,7 @@ console.log(data,error);
       </div>
 
       <p className="text-center mt-5">
-        If you don't have an account? <Link className='text-blue-500' href={'/register'}>Sign Up</Link>
+        If you do not have an account? <Link className='text-blue-500' href={'/register'}>Sign Up</Link>
       </p>
     </Card>
   );
