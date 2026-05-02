@@ -39,7 +39,7 @@ console.log(data,error);
         toast.success("Logged in successfully!");
        setTimeout(() => {
     router.push('/');
-  }, 2000);
+  }, 3000);
       }
       else{        
         toast.error(error.message || "Failed to log in. Please check your credentials and try again.");
