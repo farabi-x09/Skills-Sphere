@@ -17,12 +17,36 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
-    const [isShowPassword, setIsShowPassword] =  useState(false);
+  const [isShowPassword, setIsShowPassword] = useState(false);
+  const router = useRouter()
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, image, email, password);
+
+    const { data, error } = await authClient.signUp.email({
+      name,
+      image,
+      email,
+      password,
+    });
+    console.log(data, error);
+    if(data){
+      router.push('/')
+      toast.success("Account created successfully!");
+    }
+    else{
+      toast.error(error.message || "Failed to create account");
+    }
   };
 
   return (
@@ -84,8 +108,8 @@ export default function SignUpPage() {
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
           <FieldError />
-          <span className='absolute cursor-pointer  right-4 top-8' onClick={()=> setIsShowPassword(!isShowPassword)}>
-            { isShowPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash> }
+          <span className='absolute cursor-pointer  right-4 top-8' onClick={() => setIsShowPassword(!isShowPassword)}>
+            {isShowPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
           </span>
         </TextField>
 
@@ -99,7 +123,7 @@ export default function SignUpPage() {
           </Button>
         </div>
       </Form>
- 
+
       <div className="flex justify-center items-center gap-2 border border-gray-300 rounded-lg py-2 mt-5 w-[90%] max-w-xs mx-auto cursor-pointer hover:bg-gray-100 transition-all">
         <FaGoogle></FaGoogle>
         <button className='btn text-blue-500'>Login with Google</button>

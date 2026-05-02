@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <div className='bg-[#eee8fc] py-10'>
             <div className='w-11/12 mx-auto flex flex-wrap-reverse items-center justify-center xl:justify-between gap-10'>
-                <div className='left w-120 space-y-4  text-center md:text-left'>
+                <div className='left max-w-lg space-y-4  text-center md:text-left'>
                     <h1 className='font-bold text-3xl md:text-5xl lg:text-7xl leading-normal'>
                         Upgrade Your <span className='text-purple-600'>Skills</span> Today <Image src={rocket} alt="Rocket" className='inline-block w-10 lg:w-30 lg:h-30' />
                     </h1>
@@ -26,6 +26,8 @@ const Banner = () => {
                 </div>
                 <div className='right  '>
                 <Image src={bannerImg} alt="Banner" width={800} height='auto' />
+                {/*  <Image src={bannerImg} alt="Banner" width={800} height={500} className="w-full " />
+ */}
                 </div>
             </div>
 

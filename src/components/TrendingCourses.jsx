@@ -7,7 +7,7 @@ const res = await fetch('https://skills-sphere-seven.vercel.app/data.json');
     const data = await res.json();
 
 const TrendingCourses = () => {
-     const trendingCourses = data.slice(4,10)
+     const trendingCourses = data.slice(4,9)
     return (
          <div className='w-11/12 mx-auto'>
             <h1 className='font-bold text-2xl my-10'>

@@ -22,13 +22,13 @@ export default function RootLayout({ children }) {
       lang="en"
       className={` h-full antialiased`}
     >
-      <body className={`${poppins.className} min-h-full flex flex-col`}>
-        <Navbar />
+      <body className={`${poppins.className} min-h-full flex flex-col `}>
+        {/* <Navbar /> */}
         <main>
         {children}
         </main>
 
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </body>
     </html>
   );
