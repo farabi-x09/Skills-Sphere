@@ -125,6 +125,7 @@ if (data) {
       <div className="flex justify-center items-center gap-2 border border-gray-300 rounded-lg py-2 mt-5 w-[90%] max-w-xs mx-auto cursor-pointer hover:bg-gray-100 transition-all">
         <FaGoogle></FaGoogle>
         <button onClick={handleGoogleSignIn} className='btn text-blue-500'>Login with Google</button>
+        {/* button */}
       </div>
 
       <p className="text-center mt-5">
