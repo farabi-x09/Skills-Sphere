@@ -124,7 +124,7 @@ const handleGoogleSignIn = async () => {
         <div className="flex gap-2 justify-center sm:justify-start">
           <Button type="submit">
             <Check />
-            Submit
+            Sign Up
           </Button>
           <Button type="reset" variant="secondary">
             Reset
