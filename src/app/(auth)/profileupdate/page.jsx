@@ -18,8 +18,8 @@ const UpdateProfile = () => {
 
   useEffect(() => {
     if (user) {
-      setName(user.name || "");
-      setPhoto(user.image || "");
+      setName(user?.name );
+      setPhoto(user?.image);
     }
   }, [user]);
 
